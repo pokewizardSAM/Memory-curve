@@ -44,7 +44,7 @@ def upadte_recurve_db():
         );
         """)
 
-while True:
-    print(spf.centre_table(['Controls'],type))
-    print(spf.centre_table(["UPDATE RECORD", "PLOT MEM RECORDS", "SAVE MEM RECORDS", "TIXE" ], type))
-    time.sleep(10)
+spf.refresh_screen()
+date()
+spf.centre_table([["COMMANDS"]],"fancy_grid")
+spf.centre_table(spf.fix_list_for_tabulate(['UPDATE RECORD', "PLOT MEM RECORDS", "SAVE MEM RECORDS", "TIXE" ]) ,"fancy_grid")
