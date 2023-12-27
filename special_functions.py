@@ -21,11 +21,24 @@ def centre_txt(text,artifacts):
         logo_lines = text.split("\n")
  
         max_line_width = max(len(line) for line in logo_lines) # This calculates the maximum width of any line, almost killed me haaaaah
-
         terminal_width = os.get_terminal_size().columns
         padding = (terminal_width - max_line_width) // 2
+
+        # if max_line_width>terminal_width:                     #debugging flags
+        #     padding = (max_line_width-terminal_width)//2
+        #     for line in logo_lines:
+        #         centered_line = " " * (padding) + line
+                
+        #         print(centered_line)
+        # print(f"terminal width : {terminal_width}") #debugging flags 
+        # print(f"MAX line Width : {max_line_width}") #debugging flags
+        # print(f"padding value is this : {padding}") #debugging flags
+        # print("A"*-(padding)) #debugging flags
+        # print("aasassqsqqsqsqsq") #debugging flags
+
         for line in logo_lines:
-            centered_line = " " * padding + line
+            centered_line = " " * (padding) + line
+
             print(centered_line)
     else:
         terminal_width = os.get_terminal_size().columns
@@ -55,22 +68,24 @@ def refresh_screen():
     logo()
 
 def logo():
-    logo = f"""
-                                                                                                                                
-          ____                      ____                                                                                        
-        ,'  , `.    ,---,.        ,'  , `.        ,-.----.       ,---,.  ,----..               ,-.----.                  ,---,. 
-     ,-+-,.' _ |  ,'  .' |     ,-+-,.' _ |        \    /  \    ,'  .' | /   /   \         ,--, \    /  \        ,---.  ,'  .' | 
-  ,-+-. ;   , ||,---.'   |  ,-+-. ;   , ||        ;   :    \ ,---.'   ||   :     :      ,'_ /| ;   :    \      /__./|,---.'   | 
- ,--.'|'   |  ;||   |   .' ,--.'|'   |  ;|        |   | .\ : |   |   .'.   |  ;. / .--. |  | : |   | .\ : ,---.;  ; ||   |   .' 
-|   |  ,', |  '::   :  |-,|   |  ,', |  ':        .   : |: | :   :  |-,.   ; /--`,'_ /| :  . | .   : |: |/___/ \  | |:   :  |-, 
-|   | /  | |  ||:   |  ;/||   | /  | |  ||        |   |  \ : :   |  ;/|;   | ;   |  ' | |  . . |   |  \ :\   ;  \ ' |:   |  ;/| 
-'   | :  | :  |,|   :   .''   | :  | :  |,        |   : .  / |   :   .'|   : |   |  | ' |  | | |   : .  / \   \  \: ||   :   .' 
-;   . |  ; |--' |   |  |-,;   . |  ; |--'         ;   | |  \ |   |  |-,.   | '___:  | | :  ' ; ;   | |  \  ;   \  ' .|   |  |-, 
-|   : |  | ,    '   :  ;/||   : |  | ,            |   | ;\  \'   :  ;/|'   ; : .'|  ; ' |  | ' |   | ;\  \  \   \   ''   :  ;/| 
-|   : '  |/     |   |    \|   : '  |/             :   ' | \.'|   |    \'   | '/  :  | : ;  ; | :   ' | \.'   \   `  ;|   |    \ 
-;   | |`-'      |   :   .';   | |`-'              :   : :-'  |   :   .'|   :    /'  :  `--'   \:   : :-'      :   \ ||   :   .' 
-|   ;/          |   | ,'  |   ;/                  |   |.'    |   | ,'   \   \ .' :  ,      .-./|   |.'         '---" |   | ,'   
-'---'           `----'    '---'                   `---'      `----'      `---`    `--`----'    `---'                 `----'                                                                                                                                     
+    logo = r"""
+
+                                                                                                                                      
+          ____                     ____                                                                                               
+        ,'  , `.                 ,'  , `.          ,-.----.                       ,----..                                             
+     ,-+-,.' _ |              ,-+-,.' _ |          \    /  \                     /   /   \                                            
+  ,-+-. ;   , ||           ,-+-. ;   , ||   ,---.  ;   :    \                   |   :     :         ,--,   __  ,-.                    
+ ,--.'|'   |  ;|          ,--.'|'   |  ;|  '   ,'\ |   | .\ :                   .   |  ;. /       ,'_ /| ,' ,'/ /|    .---.           
+|   |  ,', |  ':  ,---.  |   |  ,', |  ': /   /   |.   : |: |      .--,         .   ; /--`   .--. |  | : '  | |' |  /.  ./|   ,---.   
+|   | /  | |  || /     \ |   | /  | |  ||.   ; ,. :|   |  \ :    /_ ./|         ;   | ;    ,'_ /| :  . | |  |   ,'.-' . ' |  /     \  
+'   | :  | :  |,/    /  |'   | :  | :  |,'   | |: :|   : .  / , ' , ' :         |   : |    |  ' | |  . . '  :  / /___/ \: | /    /  | 
+;   . |  ; |--'.    ' / |;   . |  ; |--' '   | .; :;   | |  \/___/ \: |         .   | '___ |  | ' |  | | |  | '  .   \  ' ..    ' / | 
+|   : |  | ,   '   ;   /||   : |  | ,    |   :    ||   | ;\  \.  \  ' |         '   ; : .'|:  | : ;  ; | ;  : |   \   \   ''   ;   /| 
+|   : '  |/    '   |  / ||   : '  |/      \   \  / :   ' | \.' \  ;   :         '   | '/  :'  :  `--'   \|  , ;    \   \   '   |  / | 
+;   | |`-'     |   :    |;   | |`-'        `----'  :   : :-'    \  \  ;         |   :    / :  ,      .-./ ---'      \   \ ||   :    | 
+|   ;/          \   \  / |   ;/                    |   |.'       :  \  \         \   \ .'   `--`----'                '---"  \   \  /  
+'---'            `----'  '---'                     `---'          \  ' ;          `---`                                      `----'   
+                                                                   `--`                                                               
 """
     centre_txt(logo,artifacts=True)
 

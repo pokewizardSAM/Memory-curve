@@ -131,6 +131,11 @@ def centre_txt(text,artifacts):
 
         terminal_width = os.get_terminal_size().columns
         padding = (terminal_width - max_line_width) // 2
+        print(f"terminal width : {terminal_width}") #debugging flags 
+        print(f"MAX line Width : {max_line_width}") #debugging flags
+        print(f"padding value is this : {padding}") #debugging flags
+        print("A"*-(padding)) #debugging flags
+        print("aasassqsqqsqsqsq")#debugging flags
         for line in logo_lines:
             centered_line = " " * padding + line
             print(centered_line)
@@ -225,7 +230,7 @@ def create_proxies():
 
 def logo():
     global day
-    logo = f"""
+    logo = r"""
    _ (`-.  _  .-')              ) (`-.                        _   .-')      ('-.    .-. .-')     ('-.  _  .-')              (`-.                         
   ( (OO  )( \( -O )              ( OO ).                     ( '.( OO )_   ( OO ).-.\  ( OO )  _(  OO)( \( -O )           _(OO  )_                       
  _.`     \ ,------.  .-'),-----.(_/.  \_)-. ,--.   ,--.       ,--.   ,--.) / . --. /,--. ,--. (,------.,------.       ,--(_/   ,. \ .-----.     .----.   
