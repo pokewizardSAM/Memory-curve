@@ -7,7 +7,7 @@ import special_functions as spf
 
 conn_obj = mysql.connect(host="localhost",
                          user="root",
-                         password="Alibha98"
+                         password="3561"
                          )
 
 cur = conn_obj.cursor()
