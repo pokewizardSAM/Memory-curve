@@ -23,3 +23,6 @@
 10. To verify that Git has been installed correctly, open a Command Prompt window and type "git --version". This should display the version number of Git that you just installed.
 
 That's it! You should now have Git installed on your Windows system and ready to use.
+
+## Desgin Files and Concept
+![Design Files](https://github.com/pokewizardSAM/Memory-curve/blob/main/MEM-RECURVE%20DESIGN%202023-12-27%2010.20.50.excalidraw.png)
