@@ -6,6 +6,9 @@
 2. Head over to your terminal by opening cmd/terminal. navigate to the path you want to copy this repo to , for example your Desktop
 3. run git in terminal , it return no error then your are good to go. but if it gives error or is not installed then follow the steps below 
 
+### NOTE: THIS PROJECT IS STILL NOT FUNCTIONAL AND I DONT HAVE ANY IDEA WHEN I WILL RESUME IT AGAIN
+
+
    ## To install Git on Windows, you can follow these steps:
 
 1. Go to the official Git website at [https://git-scm.com/download/win](https://git-scm.com/download/win) and click on the "Download" button to download the latest version of Git for Windows.
